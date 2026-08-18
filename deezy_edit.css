@@ -1,0 +1,14 @@
+/* Deezy edit layer for the built-in Gamepad Viewer DualSense skin (s=5) */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+html,body{background:transparent!important;background-color:rgba(0,0,0,0)!important}
+/* Darken the built-in DualSense body while preserving its native buttons/sticks/animations. */
+.controller.xbox{filter:brightness(.62) contrast(1.18)}
+/* Make the existing touchpad visually darker and brand it. */
+.controller.xbox .touchpad{filter:brightness(.55) contrast(1.2);position:relative}
+.controller.xbox .touchpad:after{content:'deezy';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'UnifrakturCook','Old English Text MT',serif;font-size:47px;font-weight:700;letter-spacing:1px;color:rgba(245,245,245,.92);text-shadow:0 2px 5px #000,0 0 10px rgba(255,255,255,.12);pointer-events:none}
+.controller.xbox .touchpad.pressed:after{color:#fff;transform:scale(.985)}
+/* Subtle black treatment for controls; native movement/pressed states remain intact. */
+.controller.xbox .stick,.controller.xbox .button,.controller.xbox .face,.controller.xbox .bumper,.controller.xbox .trigger{filter:grayscale(1) brightness(.72) contrast(1.25)}
+.controller.xbox .stick.pressed,.controller.xbox .button.pressed,.controller.xbox .face.pressed,.controller.xbox .bumper.pressed{filter:grayscale(1) brightness(1.05) contrast(1.3)}
+.controller.xbox .meta{filter:grayscale(1) brightness(.55)}
+.controller.xbox .meta.pressed{filter:grayscale(1) brightness(1.25)}
